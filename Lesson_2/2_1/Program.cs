@@ -1,38 +1,36 @@
 ﻿//  Write a program that outputs random number from the segment [10, 99] and shows
 // the largest digit of the number.
 Console.Clear();
-int RandomGenerate(int RandomNum)
+int RandomGenerate()
 {
-    RandomNum = new Random().Next(10, 100);
+    int RandomNum = new Random().Next(10, 100);
     return RandomNum;
 }
-int FirstNum(int n1)
+int FirstNum(int arg1)
 {
-    return n1 / 10;
+    return arg1 / 10;
 }
-int SecondNum(int n2)
+int SecondNum(int arg2)
 {
-    return n2 % 10;
+    return arg2 % 10;
 }
-int comparsion(int maxn1, int maxn2)
+int comparsion(int arg1, int arg2)
 {
-    if (maxn1 > maxn2)
+    if (arg1 > arg2)
     {
-        return maxn1;
+        return arg1;
     }
-    return maxn2;
+    return arg2;
 }
 void PrintNumber(string message)
 {
     Console.WriteLine(message);
 }
 
-int number = 0;
-int generate = RandomGenerate(number);
-int num1 = generate;
-PrintNumber("Random number: "+generate);
-int n1_0=FirstNum(num1);
+int generate = RandomGenerate();
+PrintNumber("Random number: " + generate);
+int n1_0 = FirstNum(generate);
 int num2 = generate;
-int n2_0 =SecondNum(num2);
+int n2_0 = SecondNum(num2);
 int max = comparsion(n1_0, n2_0);
 PrintNumber("Largest digit of the number: " + max);
