@@ -9,8 +9,8 @@ void PrintMessage(string message)
     Console.WriteLine(message);
 }
 int InputNum()
-{
-     return int.Parse(Console.ReadLine());
+{   
+     return int.Parse(Console.ReadLine()!);
 }
 int FirstNum(int arg)
 {
