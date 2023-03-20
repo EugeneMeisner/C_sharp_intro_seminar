@@ -13,15 +13,15 @@ int Calc(int num)
 {
     int i = 0;
 
-   while(num>0)
+    while (num > 0)
     {
-       num /= 10;
-       i++;
-       
+        num /= 10;
+        i++;
+
     }
     return i;
 }
 Print("Enter a number: ");
 int val = Parse();
 int result = Calc(val);
-Print($"{result}"); 
+Print($"{result}");
